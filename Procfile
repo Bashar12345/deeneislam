@@ -1,1 +1,1 @@
-web: gunicorn deeneislam.wsgi
+web: gunicorn cfehome.wsgi
