@@ -1,1 +1,1 @@
-web: gunicorn RED.wsgi
+web: gunicorn deeneislam.wsgi
