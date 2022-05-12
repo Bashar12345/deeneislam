@@ -1,0 +1,48 @@
+<section class="articles">
+    {{ pic_datedefault:"temp/"+present_date +".jpg" }}
+    {{ previous_pic_date ="temp/"+yesterday +".jpg" }}
+
+    <div class="article__content container--paddingall">
+
+        <h2>The creation of Allah</h2>
+        <h6>today's satelite capture</h6>
+
+        <div class="article__grid">
+
+
+            <a href="{{nasa_api.get_hdurl(nasa_api_response)}}" class="article__item ">
+
+                <div class="article__image ">
+                    <img src="{% static 'pic_date' %}" alt="Picture">
+                </div>
+
+                <div class="article__text">
+                    <div class="article__auther">
+                        {{nasa_api.get_date(nasa_api_response)}}</div>
+                    <div class="article__title">
+                        {{nasa_api.get_title(nasa_api_response)}}</div>
+                    <div class="article__description">
+                        {{nasa_api.get_explaination(nasa_api_response)}} </div>
+                </div>
+            </a>
+
+            <a href="{{nasa_api.get_hdurl(previous_nasa_api_response)}}" class="article__item">
+                <div class="article__image">
+                    <img src="{% url 'static',filename=previous_pic_date %}" alt="Picture">
+                </div>
+
+                <div class="article__text">
+                    <div class="article__auther">
+                        {{nasa_api.get_date(previous_nasa_api_response)}}</div>
+                    <div class="article__title">
+                        {{nasa_api.get_title(previous_nasa_api_response)}}</div>
+                    <div class="article__description">
+                        {{nasa_api.get_explaination(previous_nasa_api_response)}} </div>
+                </div>
+            </a>
+
+
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,30 @@
+{% extends "RED/layout.html" %}
+
+{% block body %}
+science page
+
+<div class="contents science_page " >
+
+    <div class="content container">
+   
+    <div class="content__grid ">
+{% for i in '0123456789' %}
+        <div class="content__items">
+
+            <div class="content__title">
+                <h2>Introduction </h2>
+            </div>
+            <div class="content__description">
+                <p> Islamic scientific achievements encompassed a wide range of subject areas, especially astronomy, mathematics,
+                    and medicine.</p>
+            </div>
+        </div>
+{%endfor%}
+
+    </div>
+</div>
+
+
+
+
+{%endblock body%}

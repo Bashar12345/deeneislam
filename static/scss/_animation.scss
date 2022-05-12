@@ -1,0 +1,432 @@
+.has-fade {
+    visibility: hidden;
+}
+
+@keyframes fade-in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+
+    }
+
+    1% {
+        visibility: visible;
+
+        opacity: 0;
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+
+    }
+}
+
+.fade-in {
+    animation: fade-in 200ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+    from {
+        // display: none; display actually not work in animation
+        visibility: visible;
+        opacity: 1;
+    }
+
+    99% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to {
+        visibility: visible;
+        opacity: 0;
+
+    }
+}
+
+.fade-out {
+    animation: fade-out 200ms ease-in-out forwards;
+}
+
+
+
+
+
+
+#rocket {
+    animation: rocket 10s infinite linear;
+    //transform: rotateX(-90deg);
+    //transform: scale(2);
+    transform-origin: left;
+    transform-box: fill-box;
+
+    #fire_rocket {
+
+        transform-box: fill-box;
+        animation: fire_rocket 10s infinite;
+        //translate(10px, 0px);
+    }
+}
+
+
+@keyframes rocket {
+    from {
+        //transform: translateX(5px);
+        transform: matrix(1.8, -0.5, 0.2, 0.8, 0, 0);
+
+    }
+
+    to {
+        transform: translate(-250px, -450px);
+
+    }
+}
+
+
+@keyframes fire_rocket {
+    from {
+        transform: scale(1.03) rotateX(20deg);
+    }
+
+    5% {
+        transform: scale(1);
+    }
+
+    9% {
+        transform: scale(0.905) rotate(17deg, 2deg);
+    }
+
+    15% {
+        transform: scale(1) rotate(16deg, 5deg);
+    }
+
+    35% {
+        transform:
+            scale(1.35) rotate(8deg, 15deg);
+    }
+
+    45% {
+        transform: scale(1.25) rotate(4deg, 30deg);
+    }
+
+    50% {
+        transform: scale(1.30) rotateY(35deg);
+    }
+
+    65% {
+        transform: scale(1.35) rotateY(40deg);
+    }
+
+    75% {
+        transform: scale(1.18);
+    }
+
+    85% {
+        transform: scale(.93);
+    }
+
+    to {
+        transform: scale(.85) rotate(5deg);
+
+    }
+}
+
+
+
+#star {
+    animation: blackhole 120s infinite;
+    transform-box: fill-box;
+
+    #star_1 {
+        animation: star 5s infinite;
+    }
+
+    #star_2 {
+        animation: star 8s infinite;
+    }
+
+    #star_3 {
+        animation: star 3s infinite;
+    }
+
+    #star_4 {
+        animation: star 4s infinite;
+    }
+
+    #star_5 {
+        animation: star 5s infinite;
+    }
+
+    #star_6 {
+        animation: star 6s infinite;
+    }
+
+    #star_7 {
+        animation: star 4s infinite;
+    }
+
+    #star_8 {
+        animation: star 8s infinite;
+    }
+
+    #star_9 {
+        animation: star 9s infinite;
+    }
+
+    #star_10 {
+        animation: star 2s infinite;
+    }
+
+    #star_11 {
+        animation: star 6s infinite;
+    }
+
+    #star_12 {
+        animation: star 3s infinite;
+    }
+
+    #star_13 {
+        animation: star 1s infinite;
+    }
+
+    #star_14 {
+        animation: star 9s infinite;
+    }
+
+    #ellipse_1 {
+        animation: star 5s infinite;
+    }
+
+    #ellipse_2 {
+        animation: star 8s infinite;
+    }
+
+    #ellipse_3 {
+        animation: star 3s infinite;
+    }
+
+    #ellipse_4 {
+        animation: star 4s infinite;
+    }
+
+    #ellipse_5 {
+        animation: star 5s infinite;
+    }
+
+    #ellipse_6 {
+        animation: star 6s infinite;
+    }
+
+    #ellipse_7 {
+        animation: star 4s infinite;
+    }
+
+    #ellipse_8 {
+        animation: star 8s infinite;
+    }
+
+    #ellipse_9 {
+        animation: star 10s infinite;
+    }
+
+    #ellipse_11 {
+        animation: star 9s infinite;
+    }
+
+  #ellipse_14 {
+      animation: fall 45s alternate-reverse infinite;
+  }
+
+    #ellipse_15 {
+        animation: star 7s infinite;
+    }
+
+}
+
+
+@keyframes star {
+    from {
+        //transform: translateX(5px);
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.1;
+
+    }
+}
+
+@keyframes fall {
+    from {
+        transform: translate(20px, -30px);
+        
+
+    }
+    to {
+        transform: translate(-100px,350px);
+
+    }
+}
+
+
+#blackhole {
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: rotateY(-60deg);
+    animation: blackhole 35s infinite linear;
+
+}
+
+@keyframes blackhole {
+    from {
+        transform: rotate(0deg) translateX(25px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(25px) rotate(-360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// #human {
+//     //animation: human 10s infinite linear;
+//     //transform: rotateX(-90deg);
+//     //transform: scale(2);
+//     transform-origin: left;
+//     transform-box: fill-box;
+    
+//     #face{
+//         animation: face 100s infinite linear;
+//         //transform: rotateX(-90deg);
+//         //transform: scale(2);
+//         transform-origin: left;
+//         transform-box: fill-box;
+//     }
+
+// }
+
+
+// @keyframes face {
+//     from {
+//         //transform: translateX(5px);
+//         transform: rotateX(35deg);
+
+//     }
+
+//     to {
+//         transform: translate(-250px, -450px);
+
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @keyframes fire_rocket {
+//     from {
+//         //transform: translateX(5px);
+//         transform: scale(4);
+
+//     }
+
+//     to {
+//         transform: scale(0.5);
+
+//     }
+// }
+
+
+
+#male_hand {
+    animation: m_hand 1s infinite linear;
+    transform-origin: left;
+    transform-box: fill-box;
+
+}
+
+@keyframes m_hand {
+    from {
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateY(45deg);
+
+    }
+}
+
+#female_head {
+    animation: f_head 3s infinite linear;
+    transform-origin: left;
+    transform-box: fill-box;
+
+}
+
+@keyframes f_head {
+    from {
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        transform: rotateY(10deg);
+
+    }
+}
+
+#female_hand {
+    animation: f_hand 1s infinite linear;
+    transform-origin: left;
+    transform-box: fill-box;
+
+}
+
+@keyframes f_hand {
+    from {
+        transform: rotateX(-5deg);
+    }
+
+    to {
+        transform: rotateY(15deg);
+
+    }
+}
+
+#students_giving_exam {
+    animation: std_exam 2s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes std_exam {
+    from {
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateX(5deg);
+
+    }
+}
