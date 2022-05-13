@@ -17,7 +17,8 @@ import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = Path(__file__).resolve().parent.parent\
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 print(BASE_DIR)
 
 
@@ -88,7 +89,7 @@ WSGI_APPLICATION = 'cfehome.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), # BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -129,14 +130,14 @@ USE_TZ = True
 
 
 
-
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = 'static/'
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+#PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 #print(PROJECT_ROOT)
 #
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT,'static')
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
