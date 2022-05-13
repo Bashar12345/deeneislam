@@ -133,7 +133,7 @@ USE_TZ = True
 STATIC_ROOT = BASE_DIR /'staticfiles'
 STATIC_URL = 'static/'
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+#PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 #print(PROJECT_ROOT)
 
 STATICFILES_DIRS = (
