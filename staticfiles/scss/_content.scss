@@ -1,0 +1,86 @@
+.contents {
+    display: block;
+    box-sizing: border-box;
+
+    //background-color: $lightgray;
+    //;
+    &.science_page {
+        background-position: center left;
+        background-image: url($science_page);
+    }
+
+    &.haddit_page {
+        background-position: center left;
+        background-image: url($haddit_page);
+    }
+
+    &.history_page {
+        background-position: center bottom;
+        background-image: url($history_page);
+    }
+
+    &.qu_page {
+        background-position: center center;
+        //background: rgba(255, 255, 255, 0.3)
+        background-image: url($qu_page);
+    }
+
+    .content {
+
+        &__grid {
+            display: grid;
+            z-index: 10;
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+            grid-template-columns: repeat(auto-fit, minmax(16.375rem, 1fr));
+            margin: 0.8rem;
+            gap: 1.85rem;
+            //background-color: aliceblue;
+
+            @include breakpoint-up(large) {
+                grid-template-columns: repeat(3,fr);
+               
+            }
+            // @include breakpoint-up(medium) {
+            //    grid-template-columns: repeat(2, fr);
+                
+            // }
+        }
+
+        &__items {
+            position: relative;
+            //border: 1px solid;
+            overflow: hidden;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            padding: 0.9rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        &__text {
+            color: rgb(255, 255, 255);
+            background-color: white;
+            padding: 1.825rem 1.825rem 2.5rem 1.825rem;
+
+            @include breakpoint-up(medium) {
+                padding: 1.856rem 1.6667rem;
+            }
+
+        }
+
+        &__title {
+            font-size: 1.0234rem;
+            margin-bottom: 1rem;
+            //text-decoration: wavy;
+
+        }
+
+        &__description {
+            color: #404040;
+            font-size: 0.834rem
+        }
+
+    }
+}

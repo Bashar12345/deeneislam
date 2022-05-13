@@ -1,0 +1,73 @@
+.reponsHero {
+  margin-top: 5.26rem;
+  
+
+  @include breakpoint-up(large) {
+    min-height: 48rem;
+    display: flex;
+    align-items: center;
+  }
+
+
+ // overlay picture and adjust the position size
+  &__image {
+   
+    position: relative;
+    text-align: center;
+    background-color: rgba(0, 175, 255, 0.1);
+    //background-image: url('static/images/nextGen.jpg');
+    //background-image: url($background-url-svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; // change the overlay mockup image position
+    min-height: 17.5rem;
+    @include breakpoint-up(large) {
+      flex: 3;
+      order: 2;
+      min-width: 100.1875rem;
+      min-height: 47.6875rem;
+      height: 48rem;
+      background-position: left center;
+    }
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10%;
+      height: 28%;
+      background-size: 93%;
+      //background-image: url($background-url-img);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-position: center bottom;
+      left: 50%;
+      transform: translateX(-50%) translateY(100%);
+      
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    //color: wheat;
+    background-color: rgba(0, 176, 255, 0.1);
+    //background-color: rgb(228, 110, 0);
+
+    @include breakpoint-up(large) {
+      flex: 2;
+      order: 1;
+      height: 47.6875rem;
+      text-align: left;
+
+    }
+
+    p {
+      line-height: 1.5;
+      margin: 10px;
+    }
+
+    
+  }
+}

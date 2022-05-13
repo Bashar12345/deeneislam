@@ -1,0 +1,135 @@
+.articles {
+  background-color: $lightgrid;
+}
+
+.article {
+  &__content {
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  &__grid {
+    display: grid;
+    
+
+    grid-template-columns: repeat(auto-fit, minmax(16.375rem, 1fr));
+    gap: 2.2rem;
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(3, fr);
+    }
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, fr);
+    }
+
+  }
+
+  &__item {
+    border-radius: 0.5125rem;
+    overflow: hidden;
+    background: transparent;
+    background-color: whitesmoke;
+    box-shadow: 0px, 3px, 12px rgba(0, 0, 0, 0.15);
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__image {
+    //width: 37.5rem;
+    //height: 26.25rem;
+    background-size: cover;
+    //object-fit: fill;
+    //background-image: url($article-pic);
+    background-position: center center;
+
+    img{
+      width:100%;
+    }
+    
+  }
+
+  &__text {
+    
+    //.color: rgb(255, 255, 255);
+    color: rgb(58, 49, 49);
+    filter: invert(90%);
+    padding: 1.825rem 1.825rem 2.5rem 1.825rem;
+
+    @include breakpoint-up(medium) {
+      padding: 1.856rem 1.6667rem;
+    }
+
+  }
+
+  &__title {
+    font-size: 1.0234rem;
+    margin-bottom: 1rem;
+  }
+
+  &__auther {
+    font-size: 0.63432rem;
+    margin-bottom: 0.734remrem;
+
+  }
+
+  &__description {
+    font-size: 0.834rem
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.articles {
+  background-color: lightgray;
+}
+
+.article__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: repeat auto-fit, minmax(230px, 1fr);
+      grid-template-columns: repeat auto-fit, minmax(230px, 1fr);
+  /*  grid-template-columns: 1fr; */
+/*  @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }  }*/
