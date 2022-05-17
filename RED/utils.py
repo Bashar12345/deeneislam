@@ -2,6 +2,8 @@ from datetime import datetime, timedelta, date
 from RED import nasa_api
 import json
 
+from .models import articles
+
 NasaApI_KEY='KiEVTEhfZhZamuaQ3Hj2TjjHYYAkASrDbgxXT9f0'
 
 
@@ -9,8 +11,8 @@ def utils_of_index_page():
     # KiEVTEhfZhZamuaQ3Hj2TjjHYYAkASrDbgxXT9f0
     res_dic =dict()
     today = date.today()
-    #today = today - timedelta(days=1)
-    previous_date = today - timedelta(days=1)
+    today = today - timedelta(days=1)
+    previous_date = today - timedelta(days=2)
     print(today)
     print(previous_date)
 
@@ -54,3 +56,13 @@ def utils_of_index_page():
     nasa_api.download_image(im_url, present_date)
     nasa_api.download_image(im_url_previous, yesterday)
     return todays_res_dic,previous_res_dic
+
+
+def articles_objects_view_utils():
+    article_data = articles.objects.all()
+    # article_title_list=[]
+    # for article_data in articles.objects.all() :
+    #     print(article_data.title + '\n')
+    #     article_title_list.append(article_data.title)
+    # print(article_title_list)
+    return article_data

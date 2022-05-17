@@ -8,49 +8,16 @@ history page
     <div class="content container">
 
         <div class="content__grid ">
-            {% for i in '0123456789' %}
+            {% for article_data in article %}
             <div class="content__items">
 
                 <div class="content__title">
-                    <h2>Introduction </h2>
+                   <h2> {{article_data.title}} </h2>
+                    {% comment %} <h2>Introduction </h2> {% endcomment %}
+
                 </div>
                 <div class="content__description">
-                    <p> Islamic scientific achievements encompassed a wide range of subject areas, especially astronomy,
-                        mathematics,
-                        and medicine.</p>
-                        <p>Hadhrat Aa'isha GF3W2% narrates that her father Hadhrat Abu Bakr =
-                        4
-                        was a
-                        even during the Period of Ignorance. One day,
-                        close friend of Rasulullaah
-                        Hadhrat Abu Bakr %lG&% left home to meet Rasulullaah
-                        When he met
-                        he said, "0 Abul ~ a a s i m ( ~ Why
-                        ) ! is it that you are no longer
-                        Rasulullaah
-                        present in the gatherings of your people? Why do they accuse you of speaking ill
-                        of their forefathers?" Rasulullaah @@ said, "I am the Rasul of Allaah and am
-                        calling you towards Allaah." As soon a s Rasulullaah &%% had completed, Hadhrat
-                        accepted Islaam.
-                        Abu Bakr %X@%
-                        When Rasulullaah @%! had left Hadhrat Abu Bakr km,
-                        there was none
-                        between the mountains of Makkah happier than Rasulullaah 6% because
-                        Hadhrat Abu Bakr
-                        had accepted Islaam. Hadhrat Abu Bakr k!BG5%4 then
-                        ,
-                        Talha bin Ubaydillaah , - 4
-                        met Hadhrat Uthmaan bin Affaan k ? % Hadhrat
-                        Hadhrat Zubayr bin Awwaam %BXi!3 and Hadhrat Sa'd bin Abi Waqqaas BW%,
-                        all of whom accepted Islaam. The following day, Hadhrat Abu Bakr 393W45 met
-                        ,
-                        Abu ubaydah bin Jarraah
-                        Hadhrat Uthmaan bin Madh'oon k ? % Hadhrat
-                        kzi?BG&!&, Hadhrat Abdur Rahmaan bin Awf 4!&@&?
-                        Hadhrat
-                        4j,
-                        Abu Salma bin Abdil
-                        Asad k33G#% and Hadhrat Arqam bin Abil Arqam %$BGW6, all of whom also readily</p>
+                    <p> {{article_data.description}}</p>
                 </div>
             </div>
             {%endfor%}

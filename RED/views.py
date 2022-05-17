@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.utils import timezone
 from django.views.generic import ListView,DetailView
-from .utils import utils_of_index_page
+from .utils import utils_of_index_page,articles_objects_view_utils
+from .models import articles
 
 #from django.views import View
 #from django.contrib.auth.decorators import login_required
@@ -14,6 +15,7 @@ from .utils import utils_of_index_page
 def index(request):
     title = "RED-index"
     ajker_res, ager_res =utils_of_index_page()
+    
     return render(request, 'RED/index.html', {'title': title,'ajker_res':ajker_res,'ager_res':ager_res})
 
 
@@ -62,7 +64,8 @@ def donate(request):
 
 def history(request):
     title = "RED-history"
-    return render(request,'RED/history.html', {'title': title})
+    article = articles.objects.all()
+    return render(request,'RED/history.html', {'title': title, article:'article'})
 
 def haddits(request):
     title = "RED-haddits"
