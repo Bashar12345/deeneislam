@@ -59,10 +59,10 @@ def utils_of_index_page():
 
 
 def articles_objects_view_utils():
-    article_data = articles.objects.all()
-    # article_title_list=[]
-    # for article_data in articles.objects.all() :
-    #     print(article_data.title + '\n')
-    #     article_title_list.append(article_data.title)
-    # print(article_title_list)
+    #article_data = articles.objects.all()
+    article_title_list={}
+    for article_data in articles.objects.all() :
+        print(article_data.title + '\n')
+        article_title_list.append(article_data.title)
+    print(article_title_list)
     return article_data

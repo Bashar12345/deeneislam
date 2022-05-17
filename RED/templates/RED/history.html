@@ -1,8 +1,7 @@
 {% extends "RED/layout.html" %}
 
 {% block body %}
-history page
-
+</br>
 <div class="contents history_page ">
 
     <div class="content container">
@@ -10,7 +9,7 @@ history page
         <div class="content__grid ">
             {% for article_data in article %}
             <div class="content__items">
-
+                
                 <div class="content__title">
                    <h2> {{article_data.title}} </h2>
                     {% comment %} <h2>Introduction </h2> {% endcomment %}
@@ -19,8 +18,9 @@ history page
                 <div class="content__description">
                     <p> {{article_data.description}}</p>
                 </div>
+            
             </div>
-            {%endfor%}
+            {% endfor %}
 
         </div>
     </div>

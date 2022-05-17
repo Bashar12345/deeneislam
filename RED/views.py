@@ -65,7 +65,7 @@ def donate(request):
 def history(request):
     title = "RED-history"
     article = articles.objects.all()
-    return render(request,'RED/history.html', {'title': title, article:'article'})
+    return render(request,'RED/history.html', {'title': title, 'article' : article})
 
 def haddits(request):
     title = "RED-haddits"
