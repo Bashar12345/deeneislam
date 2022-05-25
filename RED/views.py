@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.utils import timezone
 from django.views.generic import ListView,DetailView
-from .utils import utils_of_index_page,articles_objects_view_utils
+from .utils import utils_of_index_page,articles_objects_view_utils ,news_page
 from .models import articles
 
 #from django.views import View
@@ -56,6 +56,7 @@ def index(request):
 #@login_required
 def home(request):
     title = "RED-home"
+    news_page()
     return render(request,'RED/home.html', {'title': title})
 
 def donate(request):
@@ -87,6 +88,16 @@ def local(request):
 def about(request):
     title = "About"
     return render(request, 'RED/about.html', {'title': title})
+
+
+# content sets 
+# def you_dont_know(request):
+#     title = "You Dont Know"
+#     return render(request, 'RED/about.html', {'title': title})
+
+
+
+
 
 
 
