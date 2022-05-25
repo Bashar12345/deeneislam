@@ -91,9 +91,10 @@ def about(request):
 
 
 # content sets 
-# def you_dont_know(request):
-#     title = "You Dont Know"
-#     return render(request, 'RED/about.html', {'title': title})
+def you_dont_know(request):
+    title = "You Dont Know "  
+    article_list = news_page() 
+    return render(request, 'RED/you_dont_know.html', {'artilces': article_list})
 
 
 

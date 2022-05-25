@@ -98,7 +98,7 @@ def news_page():
     publishedAt =[]
     content =[]
 
-    print(articles)
+    #print(articles)
 
     for i in range(len(articles)):
         article = articles[i]

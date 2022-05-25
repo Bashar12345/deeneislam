@@ -10,7 +10,7 @@ top_headlines = newsapi.get_top_headlines(q='islam',
                                           language='en',
                                           country='us')
 
-print(top_headlines)
+#print(top_headlines)
 
 
 # /v2/everything
