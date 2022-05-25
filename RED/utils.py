@@ -109,4 +109,6 @@ def news_page():
         urlToImage.append(article['urlToImage']) 
         publishedAt.append(article['publishedAt']) 
 
-article_list = zip(source,title,description,url,urlToImage,publishedAt,content)
+    article_list = zip(source,title,description,url,urlToImage,publishedAt,content)
+
+    return article_list
