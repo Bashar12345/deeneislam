@@ -90,6 +90,7 @@ def articles_objects_view_utils():
 def news_page():
     articles = top_headlines['articles']
 
+    source = []
     title =[] 
     description =[]
     url =[]
@@ -101,10 +102,11 @@ def news_page():
 
     for i in range(len(articles)):
         article = articles[i]
+        source.append(article['source'])
         title.append(article['title']) 
         description.append(article['description']) 
         url.append(article['url']) 
         urlToImage.append(article['urlToImage']) 
         publishedAt.append(article['publishedAt']) 
 
-article_list = zip(title,description,url,urlToImage,publishedAt,content)
+article_list = zip(source,title,description,url,urlToImage,publishedAt,content)
