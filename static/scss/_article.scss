@@ -12,6 +12,7 @@
 
   &__grid {
     display: grid;
+    //background: transparent;
     
 
     grid-template-columns: repeat(auto-fit, minmax(16.375rem, 1fr));
@@ -57,7 +58,7 @@
   &__text {
     
     //.color: rgb(255, 255, 255);
-    color: rgb(58, 49, 49);
+    color: rgb(5, 5, 5);
     filter: invert(90%);
     padding: 1.825rem 1.825rem 2.5rem 1.825rem;
 
