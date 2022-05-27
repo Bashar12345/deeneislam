@@ -7073,3 +7073,7 @@ django_env/share/python-wheels/toml-0.10.0-py2.py3-none-any.whl
 django_env/share/python-wheels/urllib3-1.25.8-py2.py3-none-any.whl
 django_env/share/python-wheels/webencodings-0.5.1-py2.py3-none-any.whl
 django_env/share/python-wheels/wheel-0.34.2-py2.py3-none-any.whl
+cfehome/__pycache__/settings.cpython-38.pyc
+RED/__pycache__/urls.cpython-38.pyc
+RED/__pycache__/utils.cpython-38.pyc
+RED/__pycache__/views.cpython-38.pyc
