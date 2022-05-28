@@ -115,4 +115,6 @@ def news_page():
 
     article_list = itertools.zip_longest(source, title, description, url, urlToImage, publishedAt, content)
 
-    return article_list
+    context ={'article_list':article_list}
+
+    return context

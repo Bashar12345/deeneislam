@@ -15,7 +15,7 @@ from .models import articles
 def index(request):
     title = "RED-index"
     ajker_res, ager_res =utils_of_index_page()
-    
+
     return render(request, 'RED/index.html', {'title': title,'ajker_res':ajker_res,'ager_res':ager_res})
 
 
@@ -58,16 +58,16 @@ def about(request):
     return render(request, 'RED/about.html', {'title': title})
 
 
-# content sets 
+# content sets
 def you_dont_know(request):
-    title = "You Dont Know "  
-    article_list = news_page() 
+    title = "You Dont Know "
+    context = news_page()
     #print(article_list)
-    for source, title, description, url, urlToImage, publishedAt, content in article_list:
-        print(source)
-        print(title)
-        print(urlToImage)
-    return render(request, 'RED/news.html', {'article_list': article_list})
+    # for source, title, description, url, urlToImage, publishedAt, content in article_list:
+    #     print(source)
+    #     print(title)
+    #     print(urlToImage)
+    return render(request, 'RED/news.html', context)
 
 
 
@@ -76,7 +76,7 @@ def you_dont_know(request):
 
 
 # class product_list_view(ListView):
-#     model = auctioned_product 
+#     model = auctioned_product
 #     template_name = 'OMart/home.html'
 #     context_object_name = 'products'
 #     ordering=['-auction_end_dateTime']
