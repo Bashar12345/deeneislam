@@ -15,7 +15,6 @@ urlpatterns = [
     path('quran/', views.quran, name='RED-quran'), 
     path('science/', views.science, name='RED-science'), 
     path('local/', views.local, name='RED-local'), 
+    path('news/', views.you_dont_know, name='RED-news'), 
 
-    
-    
 ]
