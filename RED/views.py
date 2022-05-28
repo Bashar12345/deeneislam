@@ -94,7 +94,7 @@ def about(request):
 def you_dont_know(request):
     title = "You Dont Know "  
     article_list = news_page() 
-    return render(request, 'RED/news.html', {'artilces': article_list})
+    return render(request, 'RED/news.html', {'article_list': article_list})
 
 
 
