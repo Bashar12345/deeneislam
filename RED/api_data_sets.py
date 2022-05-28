@@ -1,6 +1,4 @@
 from newsapi import NewsApiClient
-
-
 import requests
 import json
 
