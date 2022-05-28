@@ -2,7 +2,7 @@ from datetime import datetime, timedelta, date
 from RED import nasa_api
 from RED.api_data_sets import top_headlines, sources, all_articles 
 import json
-
+import itertools  
 from .models import articles
 
 
@@ -112,6 +112,7 @@ def news_page():
     
     # for t in title:
     #     print(t)
-    article_list = zip(source, title, description, url, urlToImage, publishedAt, content)
+
+    article_list = itertools.zip_longest(source, title, description, url, urlToImage, publishedAt, content)
 
     return article_list

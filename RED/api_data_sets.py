@@ -19,14 +19,16 @@ newsapi = NewsApiClient(api_key=Api_key)
 
  # /v2/top-headlines
 def get_top_headlines(Api_key, Query):
-    raw_response = requests.get(f'https://newsapi.org/v2/top-headlines?q={Query}&apiKey={Api_key}').text
+    #raw_response = requests.get(f'https://newsapi.org/v2/top-headlines?q={Query}&apiKey={Api_key}').text
+    raw_response = requests.get(f'https://newsapi.org/v2/top-headlines?q={Query}&apiKey={Api_key}')
     return raw_response
     
 
 def top_headlines():
     response = get_top_headlines(Api_key, Query) 
-    headlines =  json.loads(response)
-    print(headlines)
+    #headlines =  json.loads(response)
+    headlines =  response.json()
+    #print(headlines)
     return headlines['articles']
 
 
