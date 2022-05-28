@@ -1,16 +1,33 @@
 from newsapi import NewsApiClient
 
+
+import requests
+import json
+
 # Init
-newsapi = NewsApiClient(api_key='0bf80e3a6a5d4fefb6b80ceeaccb9560')
+Api_key='0bf80e3a6a5d4fefb6b80ceeaccb9560'
 
-# /v2/top-headlines
-top_headlines = newsapi.get_top_headlines(q='islam',
-                                          #sources='bbc-news,the-verge',
-                                          category='business',
-                                          language='en',
-                                          country='us')
+Query= 'islam'
 
-#print(top_headlines)
+# Init
+newsapi = NewsApiClient(api_key=Api_key)
+
+
+# if top_headlines:
+#     print(top_headlines)
+
+
+ # /v2/top-headlines
+def get_top_headlines(Api_key, Query):
+    raw_response = requests.get(f'https://newsapi.org/v2/top-headlines?q={Query}&apiKey={Api_key}').text
+    return raw_response
+    
+
+def top_headlines():
+    response = get_top_headlines(Api_key, Query) 
+    headlines =  json.loads(response)
+    print(headlines)
+    return headlines['articles']
 
 
 # /v2/everything

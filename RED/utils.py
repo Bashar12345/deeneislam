@@ -88,7 +88,8 @@ def articles_objects_view_utils():
 
 
 def news_page():
-    articles = top_headlines['articles']
+    articles = top_headlines()
+    #articles = top_headlines['articles']
 
     source = []
     title =[] 
@@ -108,7 +109,9 @@ def news_page():
         url.append(article['url']) 
         urlToImage.append(article['urlToImage']) 
         publishedAt.append(article['publishedAt']) 
-
+    
+    # for t in title:
+    #     print(t)
     article_list = zip(source, title, description, url, urlToImage, publishedAt, content)
 
     return article_list

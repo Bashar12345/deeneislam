@@ -4,8 +4,15 @@
 
 
 
+{{article_list}}
 
-{% for article in article_list %}
-{{ article. }}
+
+<p>   source, title, description, url, urlToImage, publishedAt, content
+</p>
+    <div> 
+{% for source, title, description, url, urlToImage, publishedAt, content in article_list %}
+  <p>   {{ title }}  </p>
 {% endfor %}
+
+</div>
 {% endblock body %}
