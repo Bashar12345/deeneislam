@@ -17,6 +17,4 @@ urlpatterns = [
     path('local/', views.local, name='RED-local'), 
     path('news/', views.you_dont_know, name='RED-news'), 
 
-    
-    
 ]
