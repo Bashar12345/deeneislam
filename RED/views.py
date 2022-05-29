@@ -67,7 +67,7 @@ def you_dont_know(request):
     #     print(source)
     #     print(title)
     #     print(urlToImage)
-    return render(request, 'RED/news.html', {'article_list': article_list})
+    return render(request, 'RED/news.html', article_list)
 
 
 
