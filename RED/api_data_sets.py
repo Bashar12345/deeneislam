@@ -7,7 +7,7 @@ import json
 # Init
 Api_key='0bf80e3a6a5d4fefb6b80ceeaccb9560'
 
-Query= 'islam'
+Query= 'muslims' #'islam,God,Allah','Religion'
 
 # Init
 newsapi = NewsApiClient(api_key=Api_key)
@@ -20,7 +20,8 @@ newsapi = NewsApiClient(api_key=Api_key)
  # /v2/top-headlines
 def get_top_headlines(Api_key, Query):
     #raw_response = requests.get(f'https://newsapi.org/v2/top-headlines?q={Query}&apiKey={Api_key}').text
-    raw_response = requests.get(f'https://newsapi.org/v2/top-headlines?q={Query}&apiKey={Api_key}')
+    #raw_response = requests.get(f'https://newsapi.org/v2/top-headlines?&apiKey={Api_key}')
+    raw_response = requests.get(f'https://newsapi.org/v2/everything?q={Query}&apiKey={Api_key}')
     return raw_response
     
 

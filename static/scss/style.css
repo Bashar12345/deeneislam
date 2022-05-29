@@ -1076,6 +1076,10 @@ button,
   font-size: 0.834rem;
 }
 
+.article__publishedAt {
+  font-size: 0.234rem;
+}
+
 /*.articles {
   background-color: lightgray;
 }
