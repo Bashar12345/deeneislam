@@ -59,8 +59,9 @@
   &__text {
     
     //.color: rgb(255, 255, 255);
-    color: rgb(5, 5, 5);
-    filter: invert(90%);
+    color: $deepblack;
+    //filter: invert(90%);
+    color: $darkblue;
     padding: 1.825rem 1.825rem 2.5rem 1.825rem;
 
     @include breakpoint-up(medium) {

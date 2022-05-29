@@ -1050,9 +1050,8 @@ button,
 }
 
 .article__text {
-  color: #050505;
-  -webkit-filter: invert(90%);
-          filter: invert(90%);
+  color: #000000;
+  color: #2d314d;
   padding: 1.825rem 1.825rem 2.5rem 1.825rem;
 }
 
