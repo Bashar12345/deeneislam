@@ -4,22 +4,22 @@
 
 <div>
 
- <p>{{article_list}} </p> 
-<p>  
- source, title, description, url, urlToImage, publishedAt, content
-</p>
+    <p>{{article_list}} </p>
+    <p>
+        source, title, description, url, urlToImage, publishedAt, content
+    </p>
 
 </div>
 
 {% for source, title, description, url, urlToImage, publishedAt, content in article_list %}
 <div>
-  <p>   {{ source }}  </p>
-  <p>   {{ title }}  </p>
-  <p>   {{ description }}  </p>
-  <p>   {{ url }}  </p>
-  <p>   {{ urlToImage }}  </p>
-  <p>   {{ publishedAt }}  </p>
-  <p>   {{ content }}  </p>
+    <p> {{ source }} </p>
+    <p> {{ title }} </p>
+    <p> {{ description }} </p>
+    <p> {{ url }} </p>
+    <p> {{ urlToImage }} </p>
+    <p> {{ publishedAt }} </p>
+    <p> {{ content }} </p>
 </div>
 {% endfor %}
 
