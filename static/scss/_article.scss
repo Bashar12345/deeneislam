@@ -60,7 +60,7 @@
     
     //.color: rgb(255, 255, 255);
     color: $deepblack;
-    filter: invert(90%);
+    filter: invert(30%);
     padding: 1.825rem 1.825rem 2.5rem 1.825rem;
 
     @include breakpoint-up(medium) {
