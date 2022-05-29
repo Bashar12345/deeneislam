@@ -1,9 +1,11 @@
 .header {
-  margin-top: 5.26rem;
-
+  margin-top: 4.2rem;
+  @include breakpoint-up(large) {
+    margin-top: 5.26rem;
+  }
   nav {
-    padding-top: 1.0625rem;
-    padding-bottom: 1.0525rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.525rem;
     //margin-left: 25%;
     // position: fixed;
     // top: 0;
@@ -17,6 +19,15 @@
       width: 100%;
     }
 
+    @include breakpoint-up(large) {
+      padding-top: 1.0625rem;
+      padding-bottom: 1.0525rem;
+    }
+
+    @include breakpoint-up(medium) {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
   }
 
   &__nam {
@@ -56,7 +67,7 @@
   &__logo {
     img {
       width: 4.8125rem;
-      height: 2.575rem;
+      height: 2.075rem;
     }
   }
 
@@ -125,7 +136,7 @@
         // background: linear-gradient(to right, limegreen, lightblue);
         left: 0px;
         right: 0px;
-        bottom: -35px;
+        bottom: -30px;
         opacity: 1;
         transition: opacity 300ms ease-in-out;
 

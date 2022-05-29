@@ -3,14 +3,14 @@
 {% block body %}
 
 <div>
-
+{% comment %} 
     <p>{{article_list}} </p>
 
     <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">{{desc}}
         source, title, description, url, urlToImage, publishedAt, content
     </p>
 
-    <p style="font-family: 'Times New Roman', Times, serif;">{{news}}</p>
+    <p style="font-family: 'Times New Roman', Times, serif;">{{news}}</p> {% endcomment %}
 
 </div>
 
@@ -19,7 +19,7 @@
     <div class="article__content container--paddingall">
 
         <h2>Todays lastest update of the world</h2>
-        <h6>Allah have mercy and forgive us. If newses are doubtful then forgive me </h6>
+        <h6>Allah have mercy and forgive us. If newses are doubtful then forgive us </h6>
 
         <div class="article__grid">
             {% for source, title, description, url, urlToImage, publishedAt, content in article_list %}
