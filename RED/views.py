@@ -70,6 +70,10 @@ def you_dont_know(request):
     return render(request, 'RED/news.html', article_list)
 
 
+def contact(request):
+    title = "Contact"
+    return render(request, 'RED/contact.html', {'title': title})
+
 
 
 
