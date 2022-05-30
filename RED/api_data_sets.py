@@ -18,8 +18,8 @@ newsapi = NewsApiClient(api_key=newsapi_Api_key)
 date_form = date.today()
 #print(date_form)
 date_to = date_form - timedelta(days=10)
-print(date_form)
-print(date_to)
+#print(date_form)
+#print(date_to)
 
 parameters = {
     'q': Query, # query phrase

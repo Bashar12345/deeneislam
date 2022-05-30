@@ -12,11 +12,11 @@ NasaApI_KEY='KiEVTEhfZhZamuaQ3Hj2TjjHYYAkASrDbgxXT9f0'
 def utils_of_index_page():
     # KiEVTEhfZhZamuaQ3Hj2TjjHYYAkASrDbgxXT9f0
     res_dic =dict()
-    today = date.today()
-    today = today - timedelta(days=1)
-    previous_date = today - timedelta(days=2)
-    #print(today)
-    #print(previous_date)
+    ajker_din = date.today()
+    today = ajker_din - timedelta(days=2)
+    previous_date = ajker_din - timedelta(days=3)
+    print(today)
+    print(previous_date)
 
     nasa_api_response = nasa_api.get_data(NasaApI_KEY, today)
     #print("todays --",type(nasa_api_response))
@@ -34,6 +34,7 @@ def utils_of_index_page():
 
     desc = nasa_api.get_explaination(nasa_api_response)
 
+    #todays_res_dic = {'thumbnail_photo':thumbnail_photo,'date':day,'title':title,'desc':desc} 
     todays_res_dic = {'hd_photo':hd_photo,'thumbnail_photo':thumbnail_photo,'date':day,'title':title,'desc':desc} 
     #print(todays_res_dic)
 
