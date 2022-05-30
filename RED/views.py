@@ -23,9 +23,9 @@ def index(request):
 
 
 #@login_required
-def home(request):
-    title = "RED-home"
-    return render(request,'RED/home.html', {'title': title})
+# def home(request):
+#     title = "RED-home"
+#     return render(request,'RED/home.html', {'title': title})
 
 def donate(request):
     title = "RED-donate"
@@ -49,7 +49,7 @@ def science(request):
     return render(request,'RED/science.html', {'title': title})
 
 def local(request):
-    title = "Local"
+    title = "MarketPlace"
     return render(request, 'RED/local.html', {'title': title})
 
 #@login_required
