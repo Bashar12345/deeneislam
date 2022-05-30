@@ -15,8 +15,8 @@ def utils_of_index_page():
     today = date.today()
     today = today - timedelta(days=1)
     previous_date = today - timedelta(days=2)
-    print(today)
-    print(previous_date)
+    #print(today)
+    #print(previous_date)
 
     nasa_api_response = nasa_api.get_data(NasaApI_KEY, today)
     #print("todays --",type(nasa_api_response))
@@ -88,7 +88,8 @@ def articles_objects_view_utils():
 
 
 def news_page():
-    articles = top_headlines()
+    #newsapi_articles,newsdata_articles = top_headlines()
+    newsapi_articles = top_headlines()
     #articles = top_headlines['articles']
 
     source = []
@@ -101,8 +102,8 @@ def news_page():
 
     #print(articles)
 
-    for i in range(len(articles)):
-        article = articles[i]
+    for i in range(len(newsapi_articles)):
+        article = newsapi_articles[i]
         source.append(article['source'])
         title.append(article['title']) 
         description.append(article['description']) 
@@ -116,3 +117,32 @@ def news_page():
     context = {'article_list':article_list}
 
     return context
+
+    # "results": [
+    #     {
+    #         "title": "Gyanvapi case: Muslim side to continue arguments today",
+    #         "link": "https://www.orissapost.com/gyanvapi-case-muslim-side-to-continue-arguments-today/",
+    #         "keywords": [
+    #             "National",
+    #             "Prime News",
+    #             "Gyanvapi",
+    #             "Gyanvapi mosque",
+    #             "Muslims"
+    #         ],
+    #         "creator": [
+    #             "Post News Network"
+    #         ],
+    #         "video_url": null,
+    #         "description": "Varanasi: Advocates for the Anjuman Intezamia Masjid (AIM), the Muslim side in the Gyanvapi mosque dispute, will continue their arguments on Monday challenging the maintainability of case. “In the May 26 hearing, our team had explained how the claims and demands of the women plaintiffs cannot be allowed as they had not produced any evidence […]",
+    #         "content": "Varanasi: Advocates for the Anjuman Intezamia Masjid (AIM), the Muslim side in the Gyanvapi mosque dispute, will continue their arguments on Monday challenging the maintainability of case. “In the May 26 hearing, our team had explained how the claims and demands of the women plaintiffs cannot be allowed as they had not produced any evidence in support of their petition while their averments in several paragraphs of their petition are contradictory,” AIM advocate Abhay Nath Yadav said. On May 26, the district judge had started hearing the case on the issue of its maintainability in compliance with the order of the Supreme Court. The plaintiffs’ lawyer Hari Shankar Jain said his team will be in court on Monday though he is not sure whether the arguments of AIM advocates would conclude, and they would get an opportunity to counter them. AIM advocates are also likely to mention how the Gyanvapi mosque is covered under the Protection of Places of Worship Act, 1991, besides other laws and orders of the Supreme Court. Plaintiffs Rakhi Singh of Delhi and Laxmi Devi, Sita Sahu, Manju Vyas and Rekha Pathak had filed the petition in the court of civil judge on August 18, 2021. On April 8, the court appointed an advocate commissioner for the survey and videography of the Gyanvapi mosque.",
+    #         "pubDate": "2022-05-30 04:46:56",
+    #         "image_url": "https://www.orissapost.com/wp-content/uploads/2022/05/Gyanvapi-287x300.jpg",
+    #         "source_id": "orissapost",
+    #         "country": [
+    #             "india"
+    #         ],
+    #         "category": [
+    #             "top"
+    #         ],
+    #         "language": "english"
+    #     },
