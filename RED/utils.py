@@ -13,7 +13,7 @@ def utils_of_index_page():
     # KiEVTEhfZhZamuaQ3Hj2TjjHYYAkASrDbgxXT9f0
     res_dic =dict()
     ajker_din = date.today()
-    today = ajker_din - timedelta(days=2)
+    today = ajker_din - timedelta(days=1)
     previous_date = ajker_din - timedelta(days=3)
     print(today)
     print(previous_date)
