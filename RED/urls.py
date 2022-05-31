@@ -17,5 +17,6 @@ urlpatterns = [
     path('science/', views.science, name='RED-science'), 
     path('local/', views.local, name='RED-local'), 
     path('news/', views.you_dont_know, name='RED-news'), 
+    path('jaalnews/', views.you_know, name='RED-jaalnews'), 
 
 ]

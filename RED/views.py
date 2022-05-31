@@ -57,6 +57,11 @@ def about(request):
     title = "About"
     return render(request, 'RED/about.html', {'title': title})
 
+#@login_required
+def you_know(request):
+    title = "you_know"
+    return render(request, 'RED/jaal_news.html', {'title': title})
+
 
 # content sets 
 def you_dont_know(request):
