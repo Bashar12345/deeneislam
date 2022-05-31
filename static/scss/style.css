@@ -797,7 +797,7 @@ button,
 
 .header nav {
   padding-top: 1.0625rem;
-  padding-bottom: 0.525rem;
+  padding-bottom: 0.575rem;
   z-index: 100;
   background-color: azure;
 }
@@ -904,7 +904,7 @@ button,
   height: 4px;
   left: 0px;
   right: 0px;
-  bottom: -30px;
+  bottom: -28px;
   opacity: 1;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
