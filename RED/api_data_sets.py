@@ -36,9 +36,14 @@ def get_quran_translation_list():
     raw_response='https://quranenc.com/api/v1/translations/list'
 
 
+def get_the_selected_sura(translation_auther,sura_no):
+    raw_response=requests.get(f'https://quranenc.com/api/v1/translation/sura/english_saheeh/{sura_no}')
 
-def get_selected_quran_surah_with_translation():
-    raw_response='https://quranenc.com/api/v1/translation/sura/english_saheeh/1'
+
+
+def get_selected_quran_surah_with_translation(translation_auther,sura_no,ayat):
+    raw_response = requests.get(f'https://quranenc.com/api/v1/translation/aya/english_saheeh/{sura_no}/{ayat}') 
+   
 
 def qurans_bangla():
     raw_responsce='http://api.alquran.cloud/v1/quran'
