@@ -46,6 +46,7 @@ def qurans_bangla():
 #https://www.hadithapi.com/api/sahih-bukhari/chapters?apiKey=$2y$10$kjKW8PvRxeTN5TKbRSuaug8HbfPKgr3Qe6Fin6A9UiO4FwsIVfNu
 #https://api.hadith.sutanlab.id/books/bukhari?range=1-150
 def haddit():
+    raw_responsce='https://api.hadith.sutanlab.id/books/bukhari?range=1-150'
     return 0
 
 
