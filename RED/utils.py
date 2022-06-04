@@ -72,6 +72,34 @@ def articles_objects_view_utils():
 
 
 
+
+sample_dict =  [
+    
+    {'sale_id': 14,
+      'name': 'Macarena',
+      'fecha': datetime.date(2021, 3, 11),
+      'debe': 500.0},
+     {'sale_id': 14,
+      'name': 'Macarena',
+      'fecha': datetime.date(2021, 4, 11),
+      'debe': 500.0},
+     {'sale_id': 15,
+      'name': 'Yamila',
+      'fecha': datetime.date(2021, 4, 14),
+      'debe': 2000.0}
+    
+    ]
+encoded_json = json.dumps(sample_dict)
+credit = Creditos1.objects.create(dict_info=encoded_json)
+
+decoded_data = json.loads(credit.dict_info)
+print(decoded_data[0]["name"])
+
+
+
+
+
+
 def get_qurans_chapters():
     get_selected_quran_surah_with_translation
 
@@ -107,7 +135,13 @@ def news_page():
 
     return context
 
-    # "results": [
+
+
+
+
+
+
+# "results": [
     #     {
     #         "title": "Gyanvapi case: Muslim side to continue arguments today",
     #         "link": "https://www.orissapost.com/gyanvapi-case-muslim-side-to-continue-arguments-today/",
@@ -137,8 +171,10 @@ def news_page():
     #     },
 
 
-#news_api
-#  "articles": [
+# news_api
+
+
+# "articles": [
 #         {
 #             "source": {
 #                 "id": "la-nacion",
@@ -152,3 +188,4 @@ def news_page():
 #             "publishedAt": "2022-05-25T04:36:00Z",
 #             "content": "No es la primera vez que María Eugenia La China Suárez hace referencia al hostigamiento que siente por un sector de la prensa de espectáculos. En reiteradas oportunidades, la actriz destacó el ensaña… [+3579 chars]"
 #         },
+# ]
