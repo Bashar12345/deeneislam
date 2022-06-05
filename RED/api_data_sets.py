@@ -86,14 +86,14 @@ def top_headlines():
 
 
 # /v2/everything
-all_articles = newsapi.get_everything(q='bitcoin',
-                                      domains='bbc.co.uk,techcrunch.com',
-                                      from_param='2022-05-01',
-                                      to='2017-05-12',
-                                      language='en',
-                                      sort_by='relevancy',
-                                      #pageSize=20,
-                                      page=2)
+# all_articles = newsapi.get_everything(q='bitcoin',
+#                                       domains='bbc.co.uk,techcrunch.com',
+#                                       from_param='2022-05-01',
+#                                       to='2022-04-12',
+#                                       language='en',
+#                                       sort_by='relevancy',
+#                                       #pageSize=20,
+#                                       page=1)
 
 # /v2/top-headlines/sources
 sources = newsapi.get_sources()

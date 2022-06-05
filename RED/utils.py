@@ -75,8 +75,10 @@ def articles_objects_view_utils():
 
 sample_dict =  [
     
-    {'sale_id': 14,
-      'name': 'Macarena',
+    { 'chapter_id': 1,
+      'chapter_name': 'Macarena',
+    #   'sura_no': 2,
+    #   'chapter_name': 'Macarena',
       'fecha': datetime.date(2021, 3, 11),
       'debe': 500.0},
      {'sale_id': 14,
@@ -101,7 +103,8 @@ print(decoded_data[0]["name"])
 
 
 def get_qurans_chapters():
-    get_selected_quran_surah_with_translation
+    
+    get_selected_quran_surah_with_translation()
 
 
 def news_page():
