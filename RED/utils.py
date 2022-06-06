@@ -69,24 +69,6 @@ def articles_objects_view_utils():
     print(article_title_list)
     return article_data
 
-#  "articles": [
-#         {
-#             "source": {
-#                 "id": "la-nacion",
-#                 "name": "La Nacion"
-#             },
-#             "author": null,
-#             "title": "La China Suárez denunció a Ángel de Brito por hostigamiento y recibió una tajante respuesta al aire - LA NACION",
-#             "description": "La actriz denunció malos tratos por parte de la prensa del espectáculo; Yanina Latorre se sumó a las críticas y la desafió",
-#             "url": "https://www.lanacion.com.ar/espectaculos/television/la-china-suarez-acuso-a-angel-de-brito-de-hostigamiento-y-recibio-una-tajante-respuesta-al-aire-nid25052022/",
-#             "urlToImage": "https://resizer.glanacion.com/resizer/u-kJqonM5IvlrnVOsdffPxRhPZc=/768x0/filters:format(webp):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/lanacionar/JWI2FMV2TRBKVDBCFFV7G4F7IY.jpg",
-#             "publishedAt": "2022-05-25T04:36:00Z",
-#             "content": "No es la primera vez que María Eugenia La China Suárez hace referencia al hostigamiento que siente por un sector de la prensa de espectáculos. En reiteradas oportunidades, la actriz destacó el ensaña… [+3579 chars]"
-#         },
-
-
-
-
 def news_page():
     articles = top_headlines()
     #articles = top_headlines['articles']
