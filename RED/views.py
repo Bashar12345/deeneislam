@@ -68,11 +68,6 @@ def you_know(request):
 def you_dont_know(request):
     title = "You Dont Know "  
     article_list = news_page()
-    #print(article_list)
-    # for source, title, description, url, urlToImage, publishedAt, content in article_list:
-    #     print(source)
-    #     print(title)
-    #     print(urlToImage)
     return render(request, 'RED/news.html', article_list)
 
 
