@@ -2,6 +2,40 @@
 
 {% block body %}
 
+<div>
+  <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">{{desc}}
+      source, title, description, url, urlToImage, publishedAt, content
+  </p>
+
+  <p style="font-family: 'Times New Roman', Times, serif;">{{news}}</p> 
+
+</div>
+
+<section class="articles">
+
+  <div class="article__content container--paddingall">
+
+      <h2>Todays lastest update of the world</h2>
+      <h6>Allah have mercy and forgive us. If newses are doubtful then forgive us </h6>
+
+      <div class="article__grid">
+          {% for source, title, description, url, urlToImage, publishedAt, content in article_list %}
+          <a href="{{ url }}" class="article__item">
+              <div class="article__image">
+                  <img src="{{ urlToImage }}" alt="Picture">
+              </div>
+              <div class="article__text">
+                  <div class="article__auther">{{ source.name }}</div>
+                  <div class="article__title">{{ title }}</div>
+                  <div class="article__description"> {{ description }} </div>
+                  {% comment %} <br/>
+                  <div class="article__publishedAt"><b> {{ publishedAt }} </b> </div> {% endcomment %}
+              </div>
+          </a>
+          {% endfor %}
+      </div>
+  </div>
+</section>
 
 
 {% endblock body %}
