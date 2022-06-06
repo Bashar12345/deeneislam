@@ -61,17 +61,8 @@ def about(request):
 # content sets
 def you_dont_know(request):
     title = "You Dont Know "
-    context = news_page()
-    #print(article_list)
-    # for source, title, description, url, urlToImage, publishedAt, content in article_list:
-    #     print(source)
-    #     print(title)
-    #     print(urlToImage)
-    return render(request, 'RED/news.html', context)
-
-
-
-
+    article_list = news_page()
+    return render(request, 'RED/news.html', article_list)
 
 
 
