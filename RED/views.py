@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.utils import timezone
 from django.views.generic import ListView,DetailView
-from .utils import utils_of_index_page,articles_objects_view_utils ,news_page
+from .utils import utils_of_index_page,articles_objects_view_utils ,news_page ,get_qurans_chapters 
 from .models import articles
 
 #from django.views import View
@@ -23,9 +23,9 @@ def index(request):
 
 
 #@login_required
-def home(request):
-    title = "RED-home"
-    return render(request,'RED/home.html', {'title': title})
+# def home(request):
+#     title = "RED-home"
+#     return render(request,'RED/home.html', {'title': title})
 
 def donate(request):
     title = "RED-donate"
@@ -42,6 +42,7 @@ def haddits(request):
 
 def quran(request):
     title = "RED-quran"
+    chapters = get_qurans_chapters()
     return render(request,'RED/quran.html', {'title': title})
 
 def science(request):
@@ -49,7 +50,7 @@ def science(request):
     return render(request,'RED/science.html', {'title': title})
 
 def local(request):
-    title = "Local"
+    title = "MarketPlace"
     return render(request, 'RED/local.html', {'title': title})
 
 #@login_required
@@ -57,12 +58,27 @@ def about(request):
     title = "About"
     return render(request, 'RED/about.html', {'title': title})
 
+#@login_required
+def you_know(request):
+    title = "you_know"
+    return render(request, 'RED/jaal_news.html', {'title': title})
+
 
 # content sets 
 def you_dont_know(request):
     title = "You Dont Know "  
     article_list = news_page()
     return render(request, 'RED/news.html', article_list)
+<<<<<<< HEAD
+=======
+
+
+def contact(request):
+    title = "Contact"
+    return render(request, 'RED/contact.html', {'title': title})
+
+
+>>>>>>> 41f7841baa0cddfd220c13ed03db6d6a9a2d7526
 
 
 def contact(request):

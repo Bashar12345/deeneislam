@@ -16,7 +16,7 @@
     
 
     grid-template-columns: repeat(auto-fit, minmax(16.375rem, 1fr));
-    gap: 2.2rem;
+    gap: 2.1rem;
 
     @include breakpoint-up(large) {
       grid-template-columns: repeat(3, fr);
@@ -32,7 +32,7 @@
     border-radius: 0.5125rem;
     overflow: hidden;
     background: transparent;
-    background-color: whitesmoke;
+    background-color: transparentize($color: whitesmoke, $amount: 0.5);
     box-shadow: 0px, 3px, 12px rgba(0, 0, 0, 0.15);
     transition: all 150ms ease-in-out;
 
@@ -40,6 +40,7 @@
       transform: scale(1.05);
     }
   }
+
 
   &__image {
     //width: 37.5rem;
@@ -58,8 +59,8 @@
   &__text {
     
     //.color: rgb(255, 255, 255);
-    color: rgb(5, 5, 5);
-    filter: invert(90%);
+    color: $deepblack;
+    filter: invert(30%);
     padding: 1.825rem 1.825rem 2.5rem 1.825rem;
 
     @include breakpoint-up(medium) {
@@ -83,6 +84,22 @@
     font-size: 0.834rem
   }
 
+  &__publishedAt {
+    font-size: 0.234rem
+  }
+
+  // &__newsItem {
+  //   border-radius: 0.5125rem;
+  //   overflow: hidden;
+  //   background: transparent;
+  //   background-color: whitesmoke;
+  //   box-shadow: 0px, 3px, 12px rgba(0, 0, 0, 0.15);
+  //   transition: all 150ms ease-in-out;
+
+  //   &:hover {
+  //     transform: scale(1.05);
+  //   }
+  // }
 
 }
 

@@ -6,8 +6,9 @@ from . import views
 urlpatterns = [
     #path('', views.product_list_view.as_view(), name='RED-home'),
     path('', views.index, name='RED-index'),  
-    path('home/', views.home, name= 'RED-home'),
-    path('donate/', views.donate, name='RED-donate'),                         #urls path address string 
+    #path('home/', views.home, name= 'RED-home'),
+    path('donate/', views.donate, name='RED-donate'), 
+    path('contact/', views.contact, name='RED-contact'),                        #urls path address string 
     path('about/', views.about, name='RED-about'), 
 
     path('history/', views.history, name='RED-history'), 
@@ -16,5 +17,6 @@ urlpatterns = [
     path('science/', views.science, name='RED-science'), 
     path('local/', views.local, name='RED-local'), 
     path('news/', views.you_dont_know, name='RED-news'), 
+    path('jaalnews/', views.you_know, name='RED-jaalnews'), 
 
 ]

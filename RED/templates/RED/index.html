@@ -426,7 +426,6 @@
 
 
 
-
 <section class="articles">
     {% comment %} {{ pic_datedefault:"temp/"+present_date +".jpg" }}
     {{ previous_pic_date ="temp/"+yesterday +".jpg" }} {% endcomment %}
@@ -434,43 +433,37 @@
     <div class="article__content container--paddingall">
 
         <h2>The creation of Allah</h2>
-        <h6>today's satelite capture</h6>
+        <h6>Latest satelite capture</h6>
 
         <div class="article__grid">
 
-            
+            <a href="{{ajker_res.hd_photo}}"  alt= 'Picture is too large' class="article__item">
+                <div class="article__image">
+                    <img src="{{ajker_res.thumbnail_photo}}" alt="Picture">
+                </div>
+                <div class="article__text">
+                    <div class="article__auther">
+                        {{ajker_res.date}}</div>
+                    <div class="article__title">
+                        {{ajker_res.title}}</div>
+                    <div class="article__description">
+                        {{ajker_res.desc}} </div>
+                </div>
+            </a>
 
-
-
-<a href="{{ajker_res.hd_photo}}" class="article__item">
-    <div class="article__image">
-        <img src="{{ajker_res.thumbnail_photo}}" alt="Picture">
-    </div>
-    <div class="article__text">
-        <div class="article__auther">
-            {{ajker_res.date}}</div>
-        <div class="article__title">
-            {{ajker_res.title}}</div>
-        <div class="article__description">
-          <b>  {{ajker_res.desc}} </b> </div>
-    </div> 
-</a>
-
-<a href="{{ager_res.hd_photo}}" class="article__item">
-    <div class="article__image">
-        <img src="{{ager_res.thumbnail_photo}}" alt="Picture">
-    </div>
-    <div class="article__text">
-        <div class="article__auther">
-            {{ager_res.date}}</div>
-        <div class="article__title">
-            {{ager_res.title}}</div>
-        <div class="article__description">
-            <b>  {{ager_res.desc}}  </b>  </div>
-    </div> 
-</a>
-
-
+            <a href="{{ager_res.hd_photo}}" alt='Picture is too large' class="article__item">
+                <div class="article__image">
+                    <img src="{{ager_res.thumbnail_photo}}" alt="Picture">
+                </div>
+                <div class="article__text">
+                    <div class="article__auther">
+                        {{ager_res.date}}</div>
+                    <div class="article__title">
+                        {{ager_res.title}}</div>
+                    <div class="article__description">
+                        <b> {{ager_res.desc}} </b> </div>
+                </div>
+            </a>
 
         </div>
     </div>

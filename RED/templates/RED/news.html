@@ -4,16 +4,25 @@
 
 
 <div>
+<<<<<<< HEAD
   <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
     source, title, description, url, urlToImage, publishedAt, content
   </p>
 
   <p style="font-family: 'Times New Roman', Times, serif;"></p>
+=======
+    <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+        source, title, description, url, urlToImage, publishedAt, content
+    </p>
+
+    <p style="font-family: 'Times New Roman', Times, serif;"></p> 
+>>>>>>> 41f7841baa0cddfd220c13ed03db6d6a9a2d7526
 
 </div>
 
 <section class="articles">
 
+<<<<<<< HEAD
   <div class="article__content container--paddingall">
 
     <h2>Todays lastest update of the world</h2>
@@ -36,6 +45,30 @@
       {% endfor %}
     </div>
   </div>
+=======
+    <div class="article__content container--paddingall">
+
+        <h2>Todays lastest update of the world</h2>
+        <h6>Allah have mercy and forgive us. If newses are doubtful then forgive us </h6>
+
+        <div class="article__grid">
+            {% for source, title, description, url, urlToImage, publishedAt, content in article_list %}
+            <a href="{{ url }}" class="article__item">
+                <div class="article__image">
+                    <img src="{{ urlToImage }}" alt="Picture">
+                </div>
+                <div class="article__text">
+                    <div class="article__auther">{{ source.name }}</div>
+                    <div class="article__title">{{ title }}</div>
+                    <div class="article__description"> {{ description }} </div>
+                    {% comment %} <br/>
+                    <div class="article__publishedAt"><b> {{ publishedAt }} </b> </div> {% endcomment %}
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+>>>>>>> 41f7841baa0cddfd220c13ed03db6d6a9a2d7526
 </section>
 
 
