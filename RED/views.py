@@ -58,12 +58,16 @@ def about(request):
     return render(request, 'RED/about.html', {'title': title})
 
 
-# content sets
+# content sets 
 def you_dont_know(request):
-    title = "You Dont Know "
+    title = "You Dont Know "  
     article_list = news_page()
     return render(request, 'RED/news.html', article_list)
 
+
+def contact(request):
+    title = "Contact"
+    return render(request, 'RED/contact.html', {'title': title})
 
 
 # class product_list_view(ListView):
