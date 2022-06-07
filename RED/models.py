@@ -10,8 +10,13 @@ class articles(models.Model):
     def __str__(self):
         return self.title
 
-class qurans_ayats(models.Model):
+class chapter_ayats(models.Model):
     chapter_id = models.IntegerField(blank=False,null=False)
-    chapter_name = models.CharField(max_length=32)
+    chapter_name = models.CharField(max_length=100)
     ayats = models.JSONField(default=dict) # for list of ayats 
 
+class qurans_ayats(models.Model):
+    chapter_id = models.ForeignKey(chapter_ayats, on_delete=models.CASCADE)  # mField(blank=False,null=False)
+    sura_no = models.IntegerField(blank=False,null=False)
+    surah_name = models.CharField(max_length=24)
+    ayat_no = models.IntegerField(blank=False,null=False) 
