@@ -11,7 +11,7 @@ class articles(models.Model):
         return self.title
 
 class qurans_ayats(models.Model):
-    chapter_id = models.IntegerField(max_length=2,blank=False,null=False)
+    chapter_id = models.IntegerField(blank=False,null=False)
     chapter_name = models.CharField(max_length=32)
     ayats = models.JSONField(default=dict) # for list of ayats 
 
