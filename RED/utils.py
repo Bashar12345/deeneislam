@@ -73,29 +73,29 @@ def articles_objects_view_utils():
 
 
 
-sample_dict =  [
+# sample_dict =  [
     
-    { 'chapter_id': 1,
-      'chapter_name': 'Macarena',
-    #   'sura_no': 2,
-    #   'chapter_name': 'Macarena',
-      'fecha': datetime.date(2021, 3, 11),
-      'debe': 500.0},
-     {'sale_id': 14,
-      'name': 'Macarena',
-      'fecha': datetime.date(2021, 4, 11),
-      'debe': 500.0},
-     {'sale_id': 15,
-      'name': 'Yamila',
-      'fecha': datetime.date(2021, 4, 14),
-      'debe': 2000.0}
+#     { 'chapter_id': 1,
+#       'chapter_name': 'Macarena',
+#     #   'sura_no': 2,
+#     #   'chapter_name': 'Macarena',
+#       'fecha': datetime.date(2021, 3, 11),
+#       'debe': 500.0},
+#      {'sale_id': 14,
+#       'name': 'Macarena',
+#       'fecha': datetime.date(2021, 4, 11),
+#       'debe': 500.0},
+#      {'sale_id': 15,
+#       'name': 'Yamila',
+#       'fecha': datetime.date(2021, 4, 14),
+#       'debe': 2000.0}
     
-    ]
-encoded_json = json.dumps(sample_dict)
-credit = Creditos1.objects.create(dict_info=encoded_json)
+#     ]
+# encoded_json = json.dumps(sample_dict)
+# credit = Creditos1.objects.create(dict_info=encoded_json)
 
-decoded_data = json.loads(credit.dict_info)
-print(decoded_data[0]["name"])
+# decoded_data = json.loads(credit.dict_info)
+# print(decoded_data[0]["name"])
 
 
 
