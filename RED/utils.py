@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta, date
 from RED import nasa_api
-from RED.api_data_sets import top_headlines, sources, all_articles ,get_selected_quran_surah_with_translation
+from RED.api_data_sets import top_headlines, sources ,get_selected_quran_surah_with_translation
 import json
 import itertools  
 from .models import articles
