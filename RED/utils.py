@@ -3,7 +3,7 @@ from RED import nasa_api
 from RED.api_data_sets import top_headlines, sources ,get_selected_quran_surah_with_translation
 import json
 import itertools  
-from .models import articles,chapter_ayats
+from .models import articles,chapter_ayats,qurans_ayats
 
 
 NasaApI_KEY='KiEVTEhfZhZamuaQ3Hj2TjjHYYAkASrDbgxXT9f0'
@@ -106,9 +106,12 @@ def get_qurans_chapters():
     chapterr_id = 1
     chapter = chapter_ayats.objects.filter(chapter_id=chapterr_id).first()
     print(chapter)
-    # for topc in chapter:
-    #     print(topic.) 
-    get_selected_quran_surah_with_translation()
+    total_chapters = qurans_ayats.objects.filter(chapter_id=chapterr_id)
+
+    for topic in total_chapters:
+       print(topic) 
+    return total_chapters
+    #get_selected_quran_surah_with_translation(translation_auther,sura_no,ayat)
 
 
 def news_page():
