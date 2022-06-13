@@ -71,49 +71,38 @@ def articles_objects_view_utils():
     return article_data
 
 
-
-
-# sample_dict =  [
-    
-#     { 'chapter_id': 1,
-#       'chapter_name': 'Macarena',
-#     #   'sura_no': 2,
-#     #   'chapter_name': 'Macarena',
-#       'fecha': datetime.date(2021, 3, 11),
-#       'debe': 500.0},
-#      {'sale_id': 14,
-#       'name': 'Macarena',
-#       'fecha': datetime.date(2021, 4, 11),
-#       'debe': 500.0},
-#      {'sale_id': 15,
-#       'name': 'Yamila',
-#       'fecha': datetime.date(2021, 4, 14),
-#       'debe': 2000.0}
-    
-#     ]
-# encoded_json = json.dumps(sample_dict)
-# credit = Creditos1.objects.create(dict_info=encoded_json)
-
-# decoded_data = json.loads(credit.dict_info)
-# print(decoded_data[0]["name"])
-
-
-
-
-
-
 def get_qurans_chapters():
-    chapterr_id = 1
+    chapters = chapter_ayats.objects.all()
+    chapter_name = []
+    for nam in chapters:
+        print(nam.chapter_name)
+        chapter_name.append(nam.chapter_name)
+    print(chapter_name)
+    all_details =qurans_ayats.objects.all()
+    return chapter_name, all_details
+   
+    for topic in chapters:
+    #print(topic.sura_no, topic.ayat_no) 
+    #print(topic['sura_no'], topic['ayat_no']) 
+        ayats = topic.ayat_no
+        sura_name = topic.surah_name
+        sura_no = topic.sura_no
+        translation_auther='english_saheeh'
+    return chapter_name
+
+def get_all_ayats_form_the_chapter():
     sura = [] 
     aya =[] 
-    arabic_text =[] # "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ"
+    arabic_text =[]  # "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ"
     translation = []
     footnotes  = []
+    chapterr_id = 1
     chapter = chapter_ayats.objects.filter(chapter_id=chapterr_id).first()
-    #print(chapter)
-    total_chapters = qurans_ayats.objects.filter(chapter_id=chapterr_id)
+    #print(chapter.chapter_name)
+    chapter_name = chapter.chapter_name
+    selected_chapter = qurans_ayats.objects.filter(chapter_id=chapterr_id)
     #print(total_chapters)
-    for topic in total_chapters:
+    for topic in selected_chapter:
         #print(topic.sura_no, topic.ayat_no) 
         #print(topic['sura_no'], topic['ayat_no']) 
         ayats = topic.ayat_no
@@ -138,16 +127,10 @@ def get_qurans_chapters():
         context = {'article_list':quatation}
         # for t in title:
         #     print(t)
-    return context
+    return chapter_name, context
 
 
-    
-# {                        source.append(article['source'])
-#         title.append(article['title']) 
-#         description.append(article['description']) 
-#         url.append(article['url']) 
-#         urlToImage.append(article['urlToImage']) 
-#         publishedAt.append(article['publishedAt']) }    
+
 
 
     
@@ -182,3 +165,42 @@ def news_page():
     # for t in title:
     #     print(t)
     return context
+
+
+
+
+
+
+# sample_dict =  [
+    
+#     { 'chapter_id': 1,
+#       'chapter_name': 'Macarena',
+#     #   'sura_no': 2,
+#     #   'chapter_name': 'Macarena',
+#       'fecha': datetime.date(2021, 3, 11),
+#       'debe': 500.0},
+#      {'sale_id': 14,
+#       'name': 'Macarena',
+#       'fecha': datetime.date(2021, 4, 11),
+#       'debe': 500.0},
+#      {'sale_id': 15,
+#       'name': 'Yamila',
+#       'fecha': datetime.date(2021, 4, 14),
+#       'debe': 2000.0}
+    
+#     ]
+# encoded_json = json.dumps(sample_dict)
+# credit = Creditos1.objects.create(dict_info=encoded_json)
+
+# decoded_data = json.loads(credit.dict_info)
+# print(decoded_data[0]["name"])
+
+
+
+    
+# {                        source.append(article['source'])
+#         title.append(article['title']) 
+#         description.append(article['description']) 
+#         url.append(article['url']) 
+#         urlToImage.append(article['urlToImage']) 
+#         publishedAt.append(article['publishedAt']) }    

@@ -3,7 +3,9 @@
 {% block body %}
 Quran 
 
-{{chaps}}
+
+{{name_of_chapers}}
+{{details_of_chapters}}
 
 <div class="contents qu_page">
 
@@ -14,12 +16,10 @@ Quran
             <div class="content__items">
 
                 <div class="content__title">
-                    <h2>Introduction </h2>
+                    <h2>{{name_of_chapers}} </h2>
                 </div>
                 <div class="content__description">
-                    <p> Islamic scientific achievements encompassed a wide range of subject areas, especially astronomy,
-                        mathematics,
-                        and medicine.</p>
+                    <p>{{details_of_chapters.surah_name}} {{ details_of_chapters.ayats_no }}</p>
                 </div>
             </div>
             {%endfor%}
