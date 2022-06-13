@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.utils import timezone
 from django.views.generic import ListView,DetailView
-from .utils import utils_of_index_page,articles_objects_view_utils ,news_page ,get_qurans_chapters 
+from .utils import utils_of_index_page,articles_objects_view_utils ,news_page ,get_qurans_chapters
 from .models import articles
 
 #from django.views import View
@@ -40,10 +40,31 @@ def haddits(request):
     title = "RED-haddits"
     return render(request,'RED/haddit.html', {'title': title})
 
+
+
+
+
+
+
+
+
 def quran(request):
     title = "RED-quran"
     chapters = get_qurans_chapters()
-    return render(request,'RED/quran.html', {'title': title})
+    return render(request,'RED/quran.html', {'title': title, 'chaps':chapters})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def science(request):
     title = "RED-science"

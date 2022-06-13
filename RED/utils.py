@@ -105,15 +105,35 @@ def articles_objects_view_utils():
 def get_qurans_chapters():
     chapterr_id = 1
     chapter = chapter_ayats.objects.filter(chapter_id=chapterr_id).first()
-    print(chapter)
+    #print(chapter)
     total_chapters = qurans_ayats.objects.filter(chapter_id=chapterr_id)
-
+    #print(total_chapters)
     for topic in total_chapters:
-       print(topic) 
+        #print(topic.sura_no, topic.ayat_no) 
+        #print(topic['sura_no'], topic['ayat_no']) 
+        ayats = topic.ayat_no
+        sura_no = topic.sura_no
+        translation_auther='english_saheeh'
+        #without_ayat = ayat.strip('][') 
+        if not isinstance(ayats, str):
+            ayats=str(ayats)
+        list_ayat = list(ayats.split(','))
+        print(list_ayat,type(list_ayat)) #.split(',')
+        #print(ayat, type(ayat)) 
+        #print(translation_auther , sura_no, single_ayat)
+        for  single_aya in list_ayat:
+            quatations = get_selected_quran_surah_with_translation(translation_auther,sura_no,single_aya)
+            print(quatations)
+
+
+
+    
+
+
+
+    
     return total_chapters
-    #get_selected_quran_surah_with_translation(translation_auther,sura_no,ayat)
-
-
+  
 def news_page():
     #newsapi_articles,newsdata_articles = top_headlines()
     newsapi_articles = top_headlines()
