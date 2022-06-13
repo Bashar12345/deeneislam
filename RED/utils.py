@@ -104,6 +104,11 @@ def articles_objects_view_utils():
 
 def get_qurans_chapters():
     chapterr_id = 1
+    sura = [] 
+    aya =[] 
+    arabic_text =[] # "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ"
+    translation = []
+    footnotes  = []
     chapter = chapter_ayats.objects.filter(chapter_id=chapterr_id).first()
     #print(chapter)
     total_chapters = qurans_ayats.objects.filter(chapter_id=chapterr_id)
@@ -118,17 +123,31 @@ def get_qurans_chapters():
         if not isinstance(ayats, str):
             ayats=str(ayats)
         list_ayat = list(ayats.split(','))
-        print(list_ayat,type(list_ayat)) #.split(',')
-        #print(ayat, type(ayat)) 
-        #print(translation_auther , sura_no, single_ayat)
+        #print(list_ayat,type(list_ayat)) #.split(',')
         for  single_aya in list_ayat:
-            quatations = get_selected_quran_surah_with_translation(translation_auther,sura_no,single_aya)
-            print(quatations)
+            Quata = get_selected_quran_surah_with_translation(translation_auther,sura_no,single_aya)
+            print(Quata['sura'])
+            sura.append(Quata['sura'])
+            aya.append(Quata['aya']) 
+            arabic_text.append(Quata['arabic_text']) #= "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ"
+            translation.append(Quata['translation']) 
+            footnotes.append(Quata['footnotes']) 
 
+            #print(quatations)
+        quatation = itertools.zip_longest(sura, aya, arabic_text, translation, footnotes)
+        context = {'article_list':quatation}
+        # for t in title:
+        #     print(t)
+    return context
 
 
     
-
+# {                        source.append(article['source'])
+#         title.append(article['title']) 
+#         description.append(article['description']) 
+#         url.append(article['url']) 
+#         urlToImage.append(article['urlToImage']) 
+#         publishedAt.append(article['publishedAt']) }    
 
 
     

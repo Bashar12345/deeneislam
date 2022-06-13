@@ -45,10 +45,9 @@ def get_selected_quran_surah_with_translation(translation_auther,sura_no,ayat):
     #translation_auther='english_saheeh'
     raw_response = requests.get(f'https://quranenc.com/api/v1/translation/aya/{translation_auther}/{sura_no}/{ayat}') 
     #print(raw_response)
-     
     data = raw_response.json()
     # #print(data)
-    return data
+    return data['result']
    
 
 def qurans_bangla():
