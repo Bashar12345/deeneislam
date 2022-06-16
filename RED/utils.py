@@ -72,23 +72,47 @@ def articles_objects_view_utils():
 
 
 def get_qurans_chapters():
-    chapters = chapter_ayats.objects.all()
-    chapter_name = []
-    for nam in chapters:
-        print(nam.chapter_name)
-        chapter_name.append(nam.chapter_name)
-    print(chapter_name)
-    all_details =qurans_ayats.objects.all()
-    return chapter_name, all_details
+    data_dict=dict()
+    chapter_name = [] 
+    sura=[]
+    sura_list = []
+    ayat_no = []
+    ayat_list=[]
+    for chapter in  chapter_ayats.objects.all():
+        chapter_id = chapter.chapter_id 
+        chapters = chapter.chapter_name 
+        #print(chapter_id, chapters)
+        chapter_details = list(qurans_ayats.objects.filter(chapter_id=chapter_id))
+        for details in chapter_details:
+            sura.append(details.surah_name)
+            ayat_no.append(details.ayat_no)
+            #print(sura.surah_name)
+        if chapter_details == None:
+            print("none")
+        else:
+            print(chapter_details)
+        #print(sura)
+        if sura  not in sura_list:
+            sura_list.append(sura)
+        if ayat_no  not in ayat_list:
+            ayat_list.append(ayat_no)
+        print(ayat_list)
+        chapter_name.append(chapters)
+        #sura_name.append(chapter_details.surah_name)
+        #ayat_no.append(chapter_details.ayat_no)
+    chapter_list = itertools.zip_longest(chapter_name, sura_list, ayat_list )
+    context = {'chapter_list':chapter_list}
+
+    return context
    
-    for topic in chapters:
-    #print(topic.sura_no, topic.ayat_no) 
-    #print(topic['sura_no'], topic['ayat_no']) 
-        ayats = topic.ayat_no
-        sura_name = topic.surah_name
-        sura_no = topic.sura_no
-        translation_auther='english_saheeh'
-    return chapter_name
+    # for topic in chapters:
+    # #print(topic.sura_no, topic.ayat_no) 
+    # #print(topic['sura_no'], topic['ayat_no']) 
+    #     ayats = topic.ayat_no
+    #     sura_name = topic.surah_name
+    #     sura_no = topic.sura_no
+    #     translation_auther='english_saheeh'
+    # return chapter_name
 
 def get_all_ayats_form_the_chapter():
     sura = [] 

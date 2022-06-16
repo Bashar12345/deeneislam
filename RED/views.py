@@ -50,8 +50,8 @@ def haddits(request):
 
 def quran(request):
     title = "RED-quran"
-    name_of_chapers, context = get_qurans_chapters()
-    return render(request,'RED/quran.html', {'title': title, 'details_of_chapters':context, 'name_of_chapers':name_of_chapers})
+    chapter_list = get_qurans_chapters()
+    return render(request,'RED/quran.html', chapter_list)
 
 
 

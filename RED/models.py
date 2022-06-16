@@ -24,4 +24,4 @@ class qurans_ayats(models.Model):
     surah_name = models.CharField(max_length=24,default=None)
     ayat_no = models.CharField(max_length=100,null=False)
     def __str__(self):
-        return f'Surah:-{self.surah_name}, ayat_no:- {self.ayat_no}'
+        return f'Surah:- {self.surah_name}, ayat_no:- {self.ayat_no}'
