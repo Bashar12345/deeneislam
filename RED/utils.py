@@ -101,6 +101,7 @@ def get_qurans_chapters():
         #sura_name.append(chapter_details.surah_name)
         #ayat_no.append(chapter_details.ayat_no)
     chapter_list = itertools.zip_longest(chapter_name, sura_list, ayat_list )
+    #qoute =itertools.zip_longest( sura_list, ayat_list )
     context = {'chapter_list':chapter_list}
 
     return context
