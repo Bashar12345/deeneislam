@@ -117,13 +117,13 @@ def get_qurans_chapters():
     #     translation_auther='english_saheeh'
     # return chapter_name
 
-def get_all_ayats_form_the_chapter():
+def get_all_ayats_form_the_chapter(chapterr_id):
     sura = [] 
     aya =[] 
     arabic_text =[]  # "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ"
     translation = []
     footnotes  = []
-    chapterr_id = 1
+    #chapterr_id = 1
     chapter = chapter_ayats.objects.filter(chapter_id=chapterr_id).first()
     #print(chapter.chapter_name)
     chapter_name = chapter.chapter_name
@@ -151,10 +151,10 @@ def get_all_ayats_form_the_chapter():
 
             #print(quatations)
         quatation = itertools.zip_longest(sura, aya, arabic_text, translation, footnotes)
-        context = {'article_list':quatation}
+        context = {'article_list':quatation,'chapter_name':chapter_name}
         # for t in title:
         #     print(t)
-    return chapter_name, context
+    return context
 
 
 
