@@ -1,17 +1,16 @@
 {% extends "RED/layout.html" %}
 
 {% block body %}
-Quran 
 
 <br/>
 <br/>
-<br/>
 
-{{context}}
-{{chapter_name}}
+   
 <div class="contents qu_page">
+  
     <div class="content container ">
-
+         <p> <h3> Chapter : </h3>
+        <h2>  {{chapter_name}} </h2></p>
         <div class="content__ayatgrid">
             {% for sura, aya, arabic_text, translation, footnotes  in  chapter_list %}
            
