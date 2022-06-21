@@ -83,7 +83,7 @@ def get_qurans_chapters():
         chap_id = chapter.chapter_id 
         chapters = chapter.chapter_name 
         #print(chapter_id, chapters)
-        chapter_details = list(qurans_ayats.objects.filter(chapter_id=chapter_id))
+        chapter_details = list(qurans_ayats.objects.filter(chapter_id=chap_id))
         for details in chapter_details:
             sura.append(details.surah_name)
             ayat_no.append(details.ayat_no)

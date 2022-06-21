@@ -17,7 +17,7 @@ Quran
 
         <div class="content__grid ">
             {% for chapter_id, chapter_name, sura_list, ayat_list in  chapter_list %}
-            <a href='{% url 'RED-quranAyats' chapter_id %}' class="content__items">
+            <a href='{% url 'RED-quranAyats' int(chapter_id) %}' class="content__items">
 
                 <div class="content__title">
                     <h2>{{ chapter_name }} </h2>
