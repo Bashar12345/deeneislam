@@ -134,7 +134,8 @@ def get_all_ayats_form_the_chapter(chapterr_id):
         #print(topic['sura_no'], topic['ayat_no']) 
         ayats = topic.ayat_no
         sura_no = topic.sura_no
-        translation_auther='english_saheeh'
+        surah_name = topic.surah_name
+        translation_auther='english_saheeh' #needed variaty
         #without_ayat = ayat.strip('][') 
         if not isinstance(ayats, str):
             ayats=str(ayats)
@@ -143,15 +144,15 @@ def get_all_ayats_form_the_chapter(chapterr_id):
         for  single_aya in list_ayat:
             Quata = get_selected_quran_surah_with_translation(translation_auther,sura_no,single_aya)
             print(Quata['sura'])
-            sura.append(Quata['sura'])
             aya.append(Quata['aya']) 
             arabic_text.append(Quata['arabic_text']) #= "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ"
             translation.append(Quata['translation']) 
             footnotes.append(Quata['footnotes']) 
+            sura.append(surah_name)
 
             #print(quatations)
-        quatation = itertools.zip_longest(sura, aya, arabic_text, translation, footnotes)
-        context = {'article_list':quatation,'chapter_name':chapter_name}
+        quatation = itertools.zip_longest(sura,aya, arabic_text,translation, footnotes)
+        context = {'chapter_list':quatation,'chapter_name':chapter_name}
         # for t in title:
         #     print(t)
     return context

@@ -56,8 +56,8 @@ def quran(request):
 
 def quran_ayat(request, chapter_id):
     title = "RED-quran"
-    chapter_list = get_all_ayats_form_the_chapter(chapterr_id)
-    return render(request,'RED/quran.html', chapter_list)
+    chapter_list = get_all_ayats_form_the_chapter(chapter_id)
+    return render(request,'RED/quran_ayats.html', chapter_list)
 
 
 

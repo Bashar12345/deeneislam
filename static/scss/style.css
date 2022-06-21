@@ -955,19 +955,31 @@ button,
   }
 }
 
+.contents .content__ayatgrid {
+  display: -ms-grid;
+  display: grid;
+  z-index: 10;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -ms-grid-columns: (minmax(26.375rem, 2fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(26.375rem, 2fr));
+  margin: 0.8rem;
+  gap: 1.85rem;
+}
+
 .contents .content__items {
   position: relative;
   overflow: hidden;
-  background-color: #f2f2f2;
+  background-color: #f2f2f299;
   border-radius: 8px;
-  padding: 0.9rem;
+  padding: 1.9em;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .contents .content__text {
-  color: white;
-  background-color: white;
+  color: #0a0101;
+  background-color: transparent;
   padding: 1.825rem 1.825rem 2.5rem 1.825rem;
 }
 

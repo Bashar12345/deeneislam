@@ -2,26 +2,36 @@
 
 {% block body %}
 Quran 
+
+<br/>
+<br/>
+<br/>
+
 {{context}}
 {{chapter_name}}
 <div class="contents qu_page">
     <div class="content container ">
 
-        <div class="content__grid ">
+        <div class="content__ayatgrid">
             {% for sura, aya, arabic_text, translation, footnotes  in  chapter_list %}
-            <a href='' class="content__items">
-
+           
+           
+            <div class="content__items">
                 <div class="content__title">
-                    <h2>{{ chapter_name }} </h2>
+                    <h2>  {{arabic_text}} </h2> 
                 </div>
-
-                <div class="content__description">
-                    <p>{{ sura_list }} {{ayat_list }}</p>
-                </div>
-
-            </a>
+                <h6 >
+                   Surah: {{ sura }}, Ayat: {{ aya }} 
+                </h6>
+               
+               <div class="content__description">
+                <p> <h6 > Translation: </h6> {{ translation }}</p>
+                <p> <h6 > Footnotes: </h6> {{ footnotes }}</p>
+            </div>
+            </div>
+            <br/>
             {%endfor%}
-
+          
         </div>
     </div>
 
