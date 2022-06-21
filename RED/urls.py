@@ -14,6 +14,7 @@ urlpatterns = [
     path('history/', views.history, name='RED-history'), 
     path('haddits/', views.haddits, name='RED-haddits'), 
     path('quran/', views.quran, name='RED-quran'), 
+    path('quran_ayats/', views.quran_ayat, name='RED-quranAyats'), 
     path('science/', views.science, name='RED-science'), 
     path('local/', views.local, name='RED-local'), 
     path('news/', views.you_dont_know, name='RED-news'), 

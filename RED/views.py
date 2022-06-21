@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.utils import timezone
 from django.views.generic import ListView,DetailView
-from .utils import utils_of_index_page,articles_objects_view_utils ,news_page ,get_qurans_chapters
+from .utils import utils_of_index_page,articles_objects_view_utils ,news_page ,get_qurans_chapters,get_all_ayats_form_the_chapter
 from .models import articles
 
 #from django.views import View
@@ -54,7 +54,10 @@ def quran(request):
     return render(request,'RED/quran.html', chapter_list)
 
 
-
+def quran_ayat(request, chapter_id):
+    title = "RED-quran"
+    chapter_list = get_all_ayats_form_the_chapter()
+    return render(request,'RED/quran.html', chapter_list)
 
 
 

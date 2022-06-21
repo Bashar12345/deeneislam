@@ -2,22 +2,14 @@
 
 {% block body %}
 Quran 
-
-
 {{context}}
 {{chapter_name}}
-
-
-
-
-
 <div class="contents qu_page">
-
     <div class="content container ">
 
         <div class="content__grid ">
-            {% for chapter_id, chapter_name, sura_list, ayat_list in  chapter_list %}
-            <a href='{% url 'RED-quranAyats' chapter_id %}' class="content__items">
+            {% for , ,  in  chapter_list %}
+            <a href='' class="content__items">
 
                 <div class="content__title">
                     <h2>{{ chapter_name }} </h2>
@@ -32,8 +24,5 @@ Quran
 
         </div>
     </div>
-
-
-
 
     {%endblock body%}

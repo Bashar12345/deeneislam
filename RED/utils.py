@@ -73,13 +73,14 @@ def articles_objects_view_utils():
 
 def get_qurans_chapters():
     data_dict=dict()
+    chapter_id=[]
     chapter_name = [] 
     sura=[]
     sura_list = []
     ayat_no = []
     ayat_list=[]
     for chapter in  chapter_ayats.objects.all():
-        chapter_id = chapter.chapter_id 
+        chap_id = chapter.chapter_id 
         chapters = chapter.chapter_name 
         #print(chapter_id, chapters)
         chapter_details = list(qurans_ayats.objects.filter(chapter_id=chapter_id))
@@ -98,9 +99,10 @@ def get_qurans_chapters():
             ayat_list.append(ayat_no)
         print(ayat_list)
         chapter_name.append(chapters)
+        chapter_id.append(chap_id)
         #sura_name.append(chapter_details.surah_name)
         #ayat_no.append(chapter_details.ayat_no)
-    chapter_list = itertools.zip_longest(chapter_name, sura_list, ayat_list )
+    chapter_list = itertools.zip_longest(chapter_id,chapter_name, sura_list, ayat_list )
     #qoute =itertools.zip_longest( sura_list, ayat_list )
     context = {'chapter_list':chapter_list}
 
