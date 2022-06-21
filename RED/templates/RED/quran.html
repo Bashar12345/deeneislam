@@ -17,7 +17,7 @@ Quran
 
         <div class="content__grid ">
             {% for chapter_name, sura_list, ayat_list in  chapter_list %}
-            <div class="content__items">
+            <a href='' class="content__items">
 
                 <div class="content__title">
                     <h2>{{ chapter_name }} </h2>
@@ -27,7 +27,7 @@ Quran
                     <p>{{ sura_list }} {{ayat_list }}</p>
                 </div>
 
-            </div>
+            </a>
             {%endfor%}
 
         </div>
