@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta, date
 from RED import nasa_api
-from RED.api_data_sets import top_headlines, sources ,get_selected_quran_surah_with_translation
+from RED.api_data_sets import sources ,get_selected_quran_surah_with_translation
 import json
 import itertools  
 from .models import articles,chapter_ayats,qurans_ayats
@@ -69,7 +69,6 @@ def articles_objects_view_utils():
         article_title_list.append(article_data.title)
     print(article_title_list)
     return article_data
-
 
 def get_qurans_chapters():
     data_dict=dict()
@@ -164,9 +163,8 @@ def get_all_ayats_form_the_chapter(chapterr_id):
     
     return total_chapters
   
-def news_page():
+def news_page(newsapi_articles):
     #newsapi_articles,newsdata_articles = top_headlines()
-    newsapi_articles = top_headlines()
     #articles = top_headlines['articles']
 
     source = []

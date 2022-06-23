@@ -55,6 +55,9 @@ def qurans_bangla():
 
 #https://www.hadithapi.com/api/sahih-bukhari/chapters?apiKey=$2y$10$kjKW8PvRxeTN5TKbRSuaug8HbfPKgr3Qe6Fin6A9UiO4FwsIVfNu
 #https://api.hadith.sutanlab.id/books/bukhari?range=1-150
+
+
+
 def haddit():
     raw_responsce='https://api.hadith.sutanlab.id/books/bukhari?range=1-150'
     return 0
@@ -62,7 +65,7 @@ def haddit():
 
 
  # /v2/top-headlines
-def get_top_headlines():
+def get_islam_top_headlines():
     #raw_response = requests.get(f'https://newsapi.org/v2/top-headlines?q={Query}&apiKey={Api_key}').text
     #raw_response = requests.get(f'https://newsapi.org/v2/top-headlines?q={Query}&apiKey={Api_key}')
     newsapi_raw_response = requests.get(f'https://newsapi.org/v2/everything?',parameters)
@@ -77,8 +80,8 @@ def get_top_headlines():
     return newsapi_raw_response, newsdata_raw_response
     
 
-def top_headlines():
-    newsapi_raw_response, newsdata_raw_response = get_top_headlines() 
+def islam_top_headlines():
+    newsapi_raw_response, newsdata_raw_response = get_islam_top_headlines() 
     #headlines =  json.loads(response)
     headlines =  newsapi_raw_response.json()
     #print(headlines)
@@ -87,6 +90,12 @@ def top_headlines():
 #     print(top_headlines)
 
 
+
+def get_science_news():
+    raw_response = requests.get(f'https://newsapi.org/v2/top-headlines?country=de&category=science&apiKey={newsapi_Api_key}')
+    data = raw_response.json()
+    # #print(data)
+    return data['articles']
 
 
 

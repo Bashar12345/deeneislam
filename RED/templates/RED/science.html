@@ -1,30 +1,40 @@
 {% extends "RED/layout.html" %}
 
 {% block body %}
-science page
 
-<div class="contents science_page " >
+<div>
+    <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+       <!--  source, title, description, url, urlToImage, publishedAt, content -->
+    </p>
 
-    <div class="content container">
-   
-    <div class="content__grid ">
-{% for i in '0123456789' %}
-        <div class="content__items">
+    <p style="font-family: 'Times New Roman', Times, serif;"></p> 
 
-            <div class="content__title">
-                <h2>Introduction </h2>
-            </div>
-            <div class="content__description">
-                <p> Islamic scientific achievements encompassed a wide range of subject areas, especially astronomy, mathematics,
-                    and medicine.</p>
-            </div>
-        </div>
-{%endfor%}
-
-    </div>
 </div>
 
+<section class="articles">
+
+    <div class="article__content container--paddingall">
+
+        <h2>Todays lastest update of the world</h2>
+
+        <div class="article__grid">
+            {% for source, title, description, url, urlToImage, publishedAt, content in article_list %}
+            <a href="{{ url }}" class="article__item">
+                <div class="article__image">
+                    <img src="{{ urlToImage }}" alt="Picture">
+                </div>
+                <div class="article__text">
+                    <div class="article__auther">{{ source.name }}</div>
+                    <div class="article__title">{{ title }}</div>
+                    <div class="article__description"> {{ description }} </div>
+                    {% comment %} <br/>
+                    <div class="article__publishedAt"><b> {{ publishedAt }} </b> </div> {% endcomment %}
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 
 
-
-{%endblock body%}
+{% endblock body %}

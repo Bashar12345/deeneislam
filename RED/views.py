@@ -4,6 +4,7 @@ from django.utils import timezone
 from django.views.generic import ListView,DetailView
 from .utils import utils_of_index_page,articles_objects_view_utils ,news_page ,get_qurans_chapters,get_all_ayats_form_the_chapter
 from .models import articles
+from RED.api_data_sets import islam_top_headlines, get_science_news
 
 #from django.views import View
 #from django.contrib.auth.decorators import login_required
@@ -71,7 +72,9 @@ def quran_ayat(request, chapter_id):
 
 def science(request):
     title = "RED-science"
-    return render(request,'RED/science.html', {'title': title})
+    newsapi_articles = get_science_news()
+    article_list = news_page(newsapi_articles)
+    return render(request,'RED/science.html', article_list)
 
 def local(request):
     title = "MarketPlace"
@@ -91,7 +94,8 @@ def you_know(request):
 # content sets 
 def you_dont_know(request):
     title = "You Dont Know "  
-    article_list = news_page()
+    newsapi_articles = islam_top_headlines()
+    article_list = news_page(newsapi_articles)
     return render(request, 'RED/news.html', article_list)
 
 
