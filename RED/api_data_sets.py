@@ -59,8 +59,10 @@ def qurans_bangla():
 
 
 def haddit():
+    response = requests.get(f'https://www.hadithapi.com/api/hadiths?apiKey=$2y$10$kjKW8PvRxeTN5TKbRSuaug8HbfPKgr3Qe6Fin6A9UiO4FwsIVfNu')
     raw_responsce='https://api.hadith.sutanlab.id/books/bukhari?range=1-150'
-    return 0
+    data = response.json() 
+    return data
 
 
 
