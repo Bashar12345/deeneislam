@@ -961,8 +961,8 @@ button,
   z-index: 10;
   opacity: 0.8;
   filter: alpha(opacity=80);
-  -ms-grid-columns: (minmax(26.375rem, 2fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(26.375rem, 2fr));
+  -ms-grid-columns: (minmax(20.375rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20.375rem, 1fr));
   margin: 0.8rem;
   gap: 1.85rem;
 }
