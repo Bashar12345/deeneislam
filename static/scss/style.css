@@ -967,6 +967,13 @@ button,
   gap: 1.85rem;
 }
 
+@media (min-width: 40em) {
+  .contents .content__ayatgrid {
+    -ms-grid-columns: (fr)[2];
+        grid-template-columns: repeat(2, fr);
+  }
+}
+
 .contents .content__items {
   position: relative;
   overflow: hidden;

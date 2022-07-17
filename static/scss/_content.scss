@@ -54,17 +54,17 @@
             filter: alpha(opacity=80);
             grid-template-columns: repeat(auto-fit, minmax(20.375rem, 1fr));
             margin: 0.8rem;
-            gap: 1.85rem;
+            gap: 1.85rem; 
             //background-color: aliceblue;
 
             // @include breakpoint-up(large) {
             //     grid-template-columns: repeat(3,fr);
                
             // }
-            // @include breakpoint-up(medium) {
-            //    grid-template-columns: repeat(2, fr);
+            @include breakpoint-up(medium) {
+               grid-template-columns: repeat(2, fr);
                 
-            // }
+            }
         }
 
         &__items {
