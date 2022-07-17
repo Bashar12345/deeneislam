@@ -51,20 +51,20 @@
             display: grid;
             z-index: 10;
             opacity: 0.8;
-            filter: alpha(opacity=80);
-            grid-template-columns: repeat(auto-fit, minmax(20.375rem, 1fr));
+            //filter: alpha(opacity=80);
+            grid-template-columns: repeat(auto-fit, minmax(35.375rem, 1fr));
             margin: 0.8rem;
-            gap: 1.85rem; 
+            gap: 1.05rem; 
             //background-color: aliceblue;
 
             // @include breakpoint-up(large) {
             //     grid-template-columns: repeat(3,fr);
                
             // }
-            @include breakpoint-up(medium) {
-               grid-template-columns: repeat(2, fr);
+            // @include breakpoint-up(medium) {
+            //    grid-template-columns: repeat(2, fr);
                 
-            }
+            // }
         }
 
         &__items {
