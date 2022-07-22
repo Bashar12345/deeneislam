@@ -960,16 +960,16 @@ button,
   display: grid;
   z-index: 10;
   opacity: 0.8;
-  filter: alpha(opacity=80);
-  -ms-grid-columns: (minmax(26.375rem, 2fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(26.375rem, 2fr));
+  -ms-grid-columns: (minmax(35.375rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(35.375rem, 1fr));
   margin: 0.8rem;
-  gap: 1.85rem;
+  gap: 1.05rem;
 }
 
 .contents .content__items {
   position: relative;
   overflow: hidden;
+  color: black;
   background-color: #f2f2f299;
   border-radius: 8px;
   padding: 1.9em;
@@ -978,7 +978,6 @@ button,
 }
 
 .contents .content__text {
-  color: #0a0101;
   background-color: transparent;
   padding: 1.825rem 1.825rem 2.5rem 1.825rem;
 }
@@ -995,7 +994,6 @@ button,
 }
 
 .contents .content__description {
-  color: #404040;
   font-size: 0.834rem;
 }
 
