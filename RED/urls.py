@@ -9,7 +9,11 @@ urlpatterns = [
     #path('home/', views.home, name= 'RED-home'),
     path('donate/', views.donate, name='RED-donate'), 
     path('contact/', views.contact, name='RED-contact'),                        #urls path address string 
+    path('market/', views.market, name='RED-marketplace'), 
     path('about/', views.about, name='RED-about'), 
+
+
+
 
     path('history/', views.history, name='RED-history'), 
     path('haddits/', views.haddits, name='RED-haddits'), 

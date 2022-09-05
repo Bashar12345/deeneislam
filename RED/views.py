@@ -104,6 +104,10 @@ def contact(request):
     return render(request, 'RED/contact.html', {'title': title})
 
 
+#@login_required
+def market(request):
+    title = "About"
+    return render(request, 'RED/market.html', {'title': title})
 
 
 

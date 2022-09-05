@@ -60,7 +60,6 @@ def utils_of_index_page():
     nasa_api.download_image(im_url_previous, yesterday)
     return todays_res_dic,previous_res_dic
 
-
 def articles_objects_view_utils():
     #article_data = articles.objects.all()
     article_title_list={}
